@@ -110,7 +110,13 @@ class BlockchainHandler(APIHandler):
         Returns:
             API response data
         """
-        url = self.base_url + endpoint
+        # FIXED: Charts endpoints need api.blockchain.info instead of blockchain.info
+        if endpoint.startswith('/charts/'):
+            base_url = 'https://api.blockchain.info'
+        else:
+            base_url = self.base_url
+            
+        url = base_url + endpoint
         
         # Add CORS parameter if enabled
         if self.cors:

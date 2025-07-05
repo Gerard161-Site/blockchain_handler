@@ -1,20 +1,33 @@
-# Blockchain.com Handler
+# Blockchain.info Handler
 
-The Blockchain.com handler for MindsDB provides seamless integration with the Blockchain.com API, enabling you to access comprehensive Bitcoin blockchain data including blocks, transactions, addresses, and network statistics directly from your MindsDB instance.
+<div align="center">
+  <img src="icon.svg" alt="Blockchain.info" width="64" height="64">
+  <h3>Blockchain.info Handler for MindsDB</h3>
+  <p>Access comprehensive Bitcoin blockchain data including blocks, transactions, and network statistics</p>
+  
+  ![Version](https://img.shields.io/badge/version-0.1.0-blue)
+  ![Type](https://img.shields.io/badge/type-Data%20Handler-green)
+  ![Status](https://img.shields.io/badge/status-Active-brightgreen)
+  ![Authentication](https://img.shields.io/badge/auth-Not%20Required-brightgreen)
+</div>
+
+---
+
+The Blockchain.info handler for MindsDB provides seamless integration with the Blockchain.info API, enabling you to access comprehensive Bitcoin blockchain data including blocks, transactions, addresses, and network statistics directly from your MindsDB instance.
 
 ## Implementation
 
-This handler is implemented using the Blockchain.com API and provides access to Bitcoin blockchain data through SQL queries.
+This handler is implemented using the Blockchain.info API and provides access to Bitcoin blockchain data through SQL queries.
 
-## Blockchain.com API
+## Blockchain.info API
 
-Blockchain.com provides free access to Bitcoin blockchain data including blocks, transactions, addresses, charts, and network statistics. The API doesn't require authentication for basic endpoints and provides real-time access to Bitcoin network data.
+Blockchain.info provides free access to Bitcoin blockchain data including blocks, transactions, addresses, charts, and network statistics. The API doesn't require authentication for basic endpoints and provides real-time access to Bitcoin network data.
 
 ## Connection
 
 ### Parameters
 
-* `base_url`: Blockchain.com API base URL (default: `https://blockchain.info`)
+* `base_url`: Blockchain.info API base URL (default: `https://blockchain.info`)
 * `cors`: Enable CORS headers (default: `True`)
 
 ### Example Connection
@@ -216,7 +229,7 @@ LIMIT 20;
 
 ## Limitations
 
-- The Blockchain.com API has rate limits that may affect high-frequency queries
+- The Blockchain.info API has rate limits that may affect high-frequency queries
 - Some historical data may have limitations on how far back you can query
 - The API focuses primarily on Bitcoin data
 - Large result sets may be paginated or limited by the API
@@ -234,4 +247,15 @@ The handler includes comprehensive error handling for:
 - All monetary values are typically in satoshis (1 BTC = 100,000,000 satoshis) unless otherwise specified
 - Timestamps are Unix timestamps
 - The handler automatically handles CORS settings if needed
-- Some endpoints may return cached data to improve performance 
+- Some endpoints may return cached data to improve performance
+
+---
+
+<div align="center">
+  <p>Made with ❤️ by XplainCrypto Platform</p>
+  <p>
+    <a href="https://blockchain.info/">Blockchain.info</a> • 
+    <a href="https://mindsdb.com/">MindsDB</a> • 
+    <a href="https://github.com/mindsdb/mindsdb">GitHub</a>
+  </p>
+</div> 
